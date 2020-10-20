@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "First level frontend developer project",
   "main": "index.js",
+  "type": "module",
   "bin": {
-    "frontend-project-lvl1": "brain-games.js"
+    "brain-games": "bin/brain-games.js"
   },
   "scripts": {
     "test": "npm test"
