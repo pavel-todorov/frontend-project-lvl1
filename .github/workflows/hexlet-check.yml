@@ -10,9 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-      - run: make lint
         
-      - name: Hexlet project check
-        uses: hexlet/project-action@release
-        
+      - name: Run linter
+        run: |
+          make lint
