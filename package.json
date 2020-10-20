@@ -26,5 +26,8 @@
   "homepage": "https://github.com/pavel-todorov/frontend-project-lvl1#readme",
   "devDependencies": {
     "eslint": "^7.9.0"
+  },
+  "dependencies": {
+    "promptly": "^3.1.0"
   }
 }
