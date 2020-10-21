@@ -3,35 +3,26 @@ import promptly from 'promptly';
 const requestName = async () => {
   const name = await promptly.prompt('May I have your name? ');
   console.log(`Hello, ${name}!`);
+  return name;
 };
 
-const requestYesNoAnswer = async (number) => {
-    console.log(`Question: ${number}`);
-    const answer = await promptly.prompt('Your answer: ');
-    const isEven = (number % 2) === 0;
-    const correctAnswer = isEven ? 'yes' : 'no';
-    return { answerString: answer, correctAnswer: correctAnswer, isCorrect: correctAnswer === answer };
-}
-
-const MAX_RANDOM = 99;
-const getRandomInt = () => Math.floor(Math.random() * Math.floor(MAX_RANDOM));
-  
-const requestYesNoAnswers = async (questionsCount) => {
-    const name = await promptly.prompt('May I have your name? ');
-    console.log(`Hello, ${name}!`)
-    console.log('Answer "yes" if the number is even, otherwise answer "no".')
+const requestCycle = async (questionsCount, rules, functionality) => {
+    const name = await requestName();
+    console.log(rules);
     let correctAnswers = 0;
     while(correctAnswers < questionsCount) {
-        const result = await requestYesNoAnswer(getRandomInt());
-        if (result.isCorrect) {
+        const question = functionality();
+        console.log(`Question: ${question.questionString}`);
+        const result = await promptly.prompt('Your answer: ');
+        if (result === question.correctAnswer) {
             console.log('Correct!');
             correctAnswers += 1;
         } else {
-            console.log(`'${result.answerString}' is wrong answer ;(. Correct answer was '${result.correctAnswer}'.\nLet's try again, ${name}!`)
+            console.log(`'${result}' is wrong answer ;(. Correct answer was '${question.correctAnswer}'.\nLet's try again, ${name}!`)
             return;
         }
     }
     console.log(`Congratulations, ${name}!`);
 }
 
-export { requestName, requestYesNoAnswers };
+export { requestName, requestCycle };
