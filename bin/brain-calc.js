@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { requestCycle } from '../src/cli.js';
-import getRandomInt from '../src/mathUtils.js';
+import { getRandomInt } from '../src/mathUtils.js';
 
 const NUMBER_OF_QUESTIONS = 3;
 const MAX_VALUES = 25;
