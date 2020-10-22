@@ -1,6 +1,7 @@
 const DEFAULT_MAX_RANDOM = 99;
 
 const getRandomInt = (max = DEFAULT_MAX_RANDOM) => Math.round(Math.random() * Math.floor(max));
+const getRandomIntFromDiapazone = (min = 0, max = DEFAULT_MAX_RANDOM) => Math.round(min + Math.random() * Math.floor(max - min));
 
 const getMaxDivisor = (arg1, arg2) => {
     let res = 1;
@@ -12,4 +13,14 @@ const getMaxDivisor = (arg1, arg2) => {
     return res;
 };
 
-export { getRandomInt, getMaxDivisor };
+const generateProgression = (start, delta, count) => {
+    const res = [];
+    let current = start;
+    while (res.length < count) {
+        res.push(current);
+        current += delta;
+    }
+    return res;
+}
+
+export { getRandomInt, getMaxDivisor, getRandomIntFromDiapazone, generateProgression};
