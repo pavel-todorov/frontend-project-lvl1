@@ -9,6 +9,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:        
+      - uses: actions/checkout@v2
+          
+      - name: Hexlet project check
+        uses: hexlet/project-action@release
+        
       - name: Install
         run: |
           make install      
@@ -16,9 +21,4 @@ jobs:
       - name: Run linter
         run: |
           make lint
-          
-      - uses: actions/checkout@v2
-        
-      - name: Hexlet project check
-        uses: hexlet/project-action@release
         
