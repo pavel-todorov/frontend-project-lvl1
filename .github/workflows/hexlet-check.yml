@@ -1,4 +1,4 @@
-name: @hexlet/code
+name: frontend-project-lvl1
 
 on:
   push:
