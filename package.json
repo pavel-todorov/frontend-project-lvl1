@@ -1,5 +1,5 @@
 {
-  "name": "@hexlet/code",
+  "name": "frontend-project-lvl1-never-been",
   "version": "1.0.0",
   "description": "First level frontend developer project",
   "main": "./bin/brain-games.js",
