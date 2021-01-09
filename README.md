@@ -2,7 +2,7 @@
 
 This for hexlet frontend developer project
 
-## To see installation guide and how it's work visit
+## To see installation guide and how it's work
 
 ### Installation and Brain-even game demo
 https://asciinema.org/a/EKHo1oUyaEW57cfVfs7eRIU5E
