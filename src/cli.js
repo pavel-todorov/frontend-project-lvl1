@@ -1,16 +1,16 @@
 import promptly from 'promptly';
 
 const requestName = async () => {
-	const name = await promptly.prompt('May I have your name? ');
-	console.log(`Hello, ${name}!`);
-	return name;
+  const name = await promptly.prompt('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+  return name;
 };
 
 const requestCycle = async (questionsCount, rules, functionality) => {
-	const name = await requestName();
-	console.log(rules);
-	let correctAnswers = 0;
-	/* eslint-disable no-await-in-loop */
+  const name = await requestName();
+  console.log(rules);
+  let correctAnswers = 0;
+  /* eslint-disable no-await-in-loop */
   while (correctAnswers < questionsCount) {
     const question = functionality();
     console.log(`Question: ${question.questionString}`);
@@ -23,7 +23,7 @@ const requestCycle = async (questionsCount, rules, functionality) => {
       return;
     }
   }
-	console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 export { requestName, requestCycle };

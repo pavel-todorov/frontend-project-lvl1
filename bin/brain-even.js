@@ -15,6 +15,6 @@ const makeQuestion = () => {
 };
 
 (async () => {
-	console.log('Welcome to the Brain Games!');
-	await requestCycle(NUMBER_OF_QUESTIONS, 'Answer "yes" if the number is even, otherwise answer "no".', makeQuestion);
+  console.log('Welcome to the Brain Games!');
+  await requestCycle(NUMBER_OF_QUESTIONS, 'Answer "yes" if the number is even, otherwise answer "no".', makeQuestion);
 })();

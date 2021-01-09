@@ -25,6 +25,6 @@ const makeQuestion = () => {
 };
 
 (async () => {
-	console.log('Welcome to the Brain Games!');
-	await requestCycle(NUMBER_OF_QUESTIONS, 'What number is missing in the progression?', makeQuestion);
+  console.log('Welcome to the Brain Games!');
+  await requestCycle(NUMBER_OF_QUESTIONS, 'What number is missing in the progression?', makeQuestion);
 })();

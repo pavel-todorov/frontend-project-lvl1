@@ -16,6 +16,6 @@ const makeQuestion = () => {
 };
 
 (async () => {
-	console.log('Welcome to the Brain Games!');
-	await requestCycle(NUMBER_OF_QUESTIONS, 'Find the greatest common divisor of given numbers.', makeQuestion);
+  console.log('Welcome to the Brain Games!');
+  await requestCycle(NUMBER_OF_QUESTIONS, 'Find the greatest common divisor of given numbers.', makeQuestion);
 })();

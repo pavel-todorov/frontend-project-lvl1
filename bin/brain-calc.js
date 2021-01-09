@@ -32,6 +32,6 @@ const makeQuestion = () => {
 };
 
 (async () => {
-	console.log('Welcome to the Brain Games!');
-	await requestCycle(NUMBER_OF_QUESTIONS, 'What is the result of the expression?', makeQuestion);
+  console.log('Welcome to the Brain Games!');
+  await requestCycle(NUMBER_OF_QUESTIONS, 'What is the result of the expression?', makeQuestion);
 })();
