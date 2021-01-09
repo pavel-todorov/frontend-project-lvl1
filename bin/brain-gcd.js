@@ -7,12 +7,12 @@ const MAX_ARGUMENT = 100;
 
 const makeQuestion = () => {
   const arg1 = getRandomInt(MAX_ARGUMENT);
-	const arg2 = getRandomInt(MAX_ARGUMENT);
-	const correctAnswer = getMaxDivisor(arg1, arg2);
-	return {
-		questionString: `${arg1} ${arg2}`,
-		correctAnswer: `${correctAnswer}`,
-	};
+  const arg2 = getRandomInt(MAX_ARGUMENT);
+  const correctAnswer = getMaxDivisor(arg1, arg2);
+  return {
+    questionString: `${arg1} ${arg2}`,
+    correctAnswer: `${correctAnswer}`,
+  };
 };
 
 (async () => {

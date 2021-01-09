@@ -5,13 +5,13 @@ import { getRandomInt } from '../src/mathUtils.js';
 const NUMBER_OF_QUESTIONS = 3;
 
 const makeQuestion = () => {
-	const number = getRandomInt();
-	const isEven = (number % 2) === 0;
-	const correctAnswer = isEven ? 'yes' : 'no';
-	return {
-		questionString: `${number}`,
-		correctAnswer,
-	};
+  const number = getRandomInt();
+  const isEven = (number % 2) === 0;
+  const correctAnswer = isEven ? 'yes' : 'no';
+  return {
+    questionString: `${number}`,
+    correctAnswer,
+  };
 };
 
 (async () => {
