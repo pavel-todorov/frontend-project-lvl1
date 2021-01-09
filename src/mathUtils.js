@@ -7,6 +7,12 @@ function getRandomIntFromDiapazone(min = 0, max = DEFAULT_MAX_RANDOM) {
 }
 
 const getMaxDivisor = (arg1, arg2) => {
+  if ((arg1 === 0) && (arg2 >= 1)) {
+    return arg2;
+  }
+  if ((arg1 >= 0) && (arg2 === 0)) {
+    return arg1;
+  }
   if (arg1 <= 1 || arg2 <= 1) {
     return 1;
   }
